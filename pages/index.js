@@ -7,16 +7,18 @@ import Hero from "../components/ui/Hero";
 import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
+import Navbar from "../components/ui/Navbar";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name="robots" content="index" />
       </Head>
+      <Navbar />
       <Hero />
       <LogoGrid />
-      <GradientWrapper>
+      {/* <GradientWrapper>
         <Features />
         <CTA />
       </GradientWrapper>
@@ -24,7 +26,7 @@ export default function Home() {
       <GradientWrapper>
         <Testimonials />
       </GradientWrapper>
-      <FooterCTA />
+      <FooterCTA /> */}
     </>
   );
 }
