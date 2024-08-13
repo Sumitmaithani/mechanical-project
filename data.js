@@ -1,4 +1,4 @@
-export const tableData = {
+const tableData = {
   15: 0.289,
   16: 0.295,
   17: 0.302,
@@ -36,3 +36,5 @@ export const tableData = {
   300: 0.47,
   Rack: 0.484,
 };
+
+export default tableData;

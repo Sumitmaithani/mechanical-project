@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import gear from "../../public/Spur_gears_animation.gif";
 import animation from "../../public/animation.json";
 
-import { tableData } from "./data";
+import tableData from "../../data";
 import Image from "next/image";
 import Lottie from "lottie-react";
 

@@ -16,6 +16,7 @@ const Navbar = () => {
     };
     events.on("routeChangeStart", () => handleState());
     events.on("hashChangeStart", () => handleState());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleNavMenu = () => {
