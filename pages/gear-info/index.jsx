@@ -4,11 +4,15 @@ import Button from "../../components/ui/Button";
 import Navbar from "../../components/ui/Navbar";
 import animation from "../../public/animation.json";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 import Lottie from "lottie-react";
 
 export default function Index() {
   const [showLoading, setShowLoading] = useState(false);
+  const [data, setData] = useState({});
+  const router = useRouter();
+  const { gear } = router.query;
 
   const handleCalculation = (e) => {
     e.preventDefault();
@@ -16,6 +20,8 @@ export default function Index() {
 
     setTimeout(() => {
       setShowLoading(false);
+      const queryString = new URLSearchParams(data).toString();
+      router.push(`/result?${queryString}`);
     }, 3000);
   };
 
@@ -46,6 +52,7 @@ export default function Index() {
                   type="text"
                   required
                   className="mt-2 focus:border-blue-600"
+                  onChange={(e) => setData({ ...data, teeth: e.target.value })}
                 />
               </div>
               <div>
@@ -55,6 +62,9 @@ export default function Index() {
                   type="text"
                   required
                   className="mt-2 focus:border-blue-600"
+                  onChange={(e) =>
+                    setData({ ...data, pitchDiameter: e.target.value })
+                  }
                 />
               </div>
               <div>
@@ -64,6 +74,9 @@ export default function Index() {
                   type="text"
                   required
                   className="mt-2 focus:border-blue-600"
+                  onChange={(e) =>
+                    setData({ ...data, diametralPitch: e.target.value })
+                  }
                 />
               </div>
               <div>
@@ -73,8 +86,42 @@ export default function Index() {
                   type="text"
                   required
                   className="mt-2 focus:border-blue-600"
+                  onChange={(e) =>
+                    setData({ ...data, pressureAngle: e.target.value })
+                  }
                 />
               </div>
+              {gear === "Spur Gear" ? (
+                <div>
+                  <label>Sut* :</label>
+                  <Input
+                    aria-label="Sut"
+                    type="text"
+                    required
+                    className="mt-2 focus:border-blue-600"
+                    onChange={(e) => setData({ ...data, sut: e.target.value })}
+                  />
+                </div>
+              ) : (
+                ""
+              )}
+
+              {gear === "Helical Gear" ? (
+                <div>
+                  <label>Helix Angle* :</label>
+                  <Input
+                    aria-label="helix angle"
+                    type="text"
+                    required
+                    className="mt-2 focus:border-blue-600"
+                    onChange={(e) =>
+                      setData({ ...data, helixAngle: e.target.value })
+                    }
+                  />
+                </div>
+              ) : (
+                ""
+              )}
 
               <div className="pt-1">
                 <Button className="w-full text-white ring-offset-2 ring-blue-600 focus:ring bg-blue-600 hover:bg-blue-500 active:bg-gray-900">

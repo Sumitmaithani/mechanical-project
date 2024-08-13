@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Navbar from "../components/ui/Navbar";
 import Image from "next/image";
-import spurgear from "../public/images/Spur_Gear.svg";
+import spurgear from "../public/images/spur.jpeg";
+import helical from "../public/images/helical.jpeg";
+import doublehelical from "../public/images/double_helical.jpeg";
 import NavLink from "../components/ui/NavLink";
 
 export default function GetStarted() {
@@ -35,7 +37,12 @@ export default function GetStarted() {
               } hover:cursor-pointer`}
               onClick={() => handleGearSelect("Spur Gear")}
             >
-              <Image src={spurgear} alt="gear" width={200} />
+              <Image
+                src={spurgear}
+                alt="gear"
+                width={200}
+                className="rounded-2xl"
+              />
               <h4>Spur Gear</h4>
             </div>
             <div
@@ -48,7 +55,12 @@ export default function GetStarted() {
               } hover:cursor-pointer`}
               onClick={() => handleGearSelect("Helical Gear")}
             >
-              <Image src={spurgear} alt="gear" width={200} />
+              <Image
+                src={helical}
+                alt="gear"
+                width={200}
+                className="rounded-2xl"
+              />
               <h4>Helical Gear</h4>
             </div>
             <div
@@ -61,7 +73,12 @@ export default function GetStarted() {
               } hover:cursor-pointer`}
               onClick={() => handleGearSelect("Double Helical Gear")}
             >
-              <Image src={spurgear} alt="gear" width={200} />
+              <Image
+                src={doublehelical}
+                alt="gear"
+                width={200}
+                className="rounded-2xl"
+              />
               <h4>Double Helical Gear</h4>
             </div>
           </div>
