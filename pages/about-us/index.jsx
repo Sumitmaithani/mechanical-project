@@ -1,36 +1,46 @@
 import Image from "next/image";
-import team from "../../public/images/teams.jpeg";
+import team from "../../public/images/group.jpeg";
 import NavLink from "../../components/ui/NavLink";
 import user1 from "../../public/images/dummy_user.png";
 import instagram from "../../public/icons/instagram.png";
 import Link from "next/link";
 import Navbar from "../../components/ui/Navbar";
 
+import nitin from "../../public/images/nitin.jpeg";
+import adhyansh from "../../public/images/adhyansh.jpeg";
+import abhilash from "../../public/images/abhilash.jpeg";
+import akhil from "../../public/images/akhil.jpeg";
+import sumit from "../../public/images/sumit.jpeg";
+
 const teamData = [
   {
     name: "Sumit Maithani",
-    image: user1,
-    instagram: "https://www.instagram.com/sumitmaithani/",
+    image: sumit,
+    instagram: "https://www.instagram.com/sumitmaithani1/",
   },
   {
-    name: "Sumit Maithani",
-    image: user1,
-    instagram: "https://www.instagram.com/sumitmaithani/",
+    name: "Akhil Gupta",
+    image: akhil,
+    instagram:
+      "https://www.instagram.com/akhil21gupta_?igsh=MWl4NnhkYWxyY2JrNA==",
   },
   {
-    name: "Sumit Maithani",
-    image: user1,
-    instagram: "https://www.instagram.com/sumitmaithani/",
+    name: "Nitin Bisht",
+    image: nitin,
+    instagram:
+      "https://www.instagram.com/nitin_bisht009?utm_source=qr&igsh=MWlocnM5dHhtM3lsdg==",
   },
   {
-    name: "Sumit Maithani",
-    image: user1,
-    instagram: "https://www.instagram.com/sumitmaithani/",
+    name: "Abhilash Mundepi",
+    image: abhilash,
+    instagram:
+      "https://www.instagram.com/abhilashmundepi?utm_source=qr&igsh=MXM1Y2k1MHh3bTVhdg==",
   },
   {
-    name: "Sumit Maithani",
-    image: user1,
-    instagram: "https://www.instagram.com/sumitmaithani/",
+    name: "Adhyansh Bhandari",
+    image: adhyansh,
+    instagram:
+      "https://www.instagram.com/adhyansh_bhandari?utm_source=qr&igsh=MTQxNDRya3U5MWIwcw==",
   },
 ];
 

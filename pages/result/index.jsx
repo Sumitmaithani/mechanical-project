@@ -31,7 +31,8 @@ const Index = () => {
       : 0) || 0;
 
   const beamStrength =
-    moduleValue * (10 * moduleValue) * (data.sut / 3) * tableData[data.teeth];
+    moduleValue * (10 * moduleValue) * (data.sut / 3) * tableData[data.teeth] ||
+    0;
 
   return (
     <div>
