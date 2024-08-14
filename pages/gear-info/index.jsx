@@ -35,6 +35,7 @@ export default function Index() {
                 required
                 className="mt-2 focus:border-blue-600"
                 onChange={(e) => setData({ ...data, teeth: e.target.value })}
+                placeholder="e.g. 20"
               />
             </div>
             <div>
@@ -47,20 +48,10 @@ export default function Index() {
                 onChange={(e) =>
                   setData({ ...data, pitchDiameter: e.target.value })
                 }
+                placeholder="e.g. 10mm"
               />
             </div>
-            <div>
-              <label>Diametral pitch* (P):</label>
-              <Input
-                aria-label="Diametral pitch"
-                type="text"
-                required
-                className="mt-2 focus:border-blue-600"
-                onChange={(e) =>
-                  setData({ ...data, diametralPitch: e.target.value })
-                }
-              />
-            </div>
+
             <div>
               <label>Pressure Angle* (PA):</label>
               <Input
@@ -71,6 +62,7 @@ export default function Index() {
                 onChange={(e) =>
                   setData({ ...data, pressureAngle: e.target.value })
                 }
+                placeholder="e.g. 20"
               />
             </div>
             {gear === "Spur Gear" ? (
@@ -82,6 +74,7 @@ export default function Index() {
                   required
                   className="mt-2 focus:border-blue-600"
                   onChange={(e) => setData({ ...data, sut: e.target.value })}
+                  placeholder="e.g. 300"
                 />
               </div>
             ) : (
